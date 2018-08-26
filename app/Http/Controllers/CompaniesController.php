@@ -14,7 +14,8 @@ class CompaniesController extends Controller
      */
     public function index()
     {
-        //
+        $companies = Company::all();
+        return view('companies.index', ['companies' => $companies]);
     }
 
     /**
@@ -46,7 +47,12 @@ class CompaniesController extends Controller
      */
     public function show(Company $company)
     {
-        //
+        // $company = Company::where('id', $company->id)->first();
+        $company = Company::find($company->id);
+
+        // Search all project of company
+        
+        return view('companies.show', ['company' => $company]);
     }
 
     /**
