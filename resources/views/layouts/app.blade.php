@@ -70,10 +70,20 @@
                 </div>
             </div>
         </nav>
-
         <main class="py-4 container">
+            <div class="container no-gutters">
+                @include('include.messages')
+            </div>
             @yield('content')
         </main>
     </div>
+    <script>
+        // Auto close alert
+        window.setTimeout(function() {
+            $(".alert").fadeTo(500, 0).slideUp(500, function(){
+                $(this).remove(); 
+            });
+        }, 4000);
+    </script>
 </body>
 </html>
