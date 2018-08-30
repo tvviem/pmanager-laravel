@@ -5,13 +5,14 @@
         <div class="card border border-primary">
             <div class="card-header bg-primary text-white">
                 Companies List
+                <a class="btn btn-primary btn-sm float-right" href="/companies/create">New company</a>
             </div>
             <div class="card-body">
                 <ul class="list-group">
                     @foreach ($companies as $company)
                         <li class="list-group-item">
                             <a href="/companies/{{$company->id}}">{{ $company->name }}</a>
-                        </li>    
+                        </li>
                     @endforeach
                 </ul>
             </div>
