@@ -10,6 +10,7 @@
 
         <!-- Example row of columns -->
         <div class="row p-2 bg-white no-gutters">
+            <a href="/projects/create" class="btn btn-default float-right">Add Project</a>
             @foreach ($company->projects as $project)
                 <div class="col-lg-4">
                     <h2>{{ $project->name }}</h2>
