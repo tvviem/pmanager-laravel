@@ -98,7 +98,7 @@ class CompaniesController extends Controller
             return redirect()->route('companies.show', ['company' => $company->id])
                     ->with('success','Company updated successfully');
         }
-        return back()->withInput()->with('error', 'Error creating new company');
+        return back()->withInput()->with('error', 'Error updating this company');
     }
 
     /**
